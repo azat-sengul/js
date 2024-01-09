@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veri Yazdırma</title>
+</head>
+<body>
+
+    <h1 id="name">Text</h1>
+
+    <button onclick="alert('print this text')" >Buton</button>
+    
+    <script>
+        //Ver yazdırma yöntemleri
+
+        // 1. ziyaretçiye bir mesaj göstermek için alert kullanılır
+        alert("Değişken tanımlama 1: Ziyaretçi mesajı")
+        // veya
+        var ad  = "azat";
+        alert(ad);
+
+        //2. Herhangi bir metni ekrana yazdırmak için document.write kullanılır
+
+        document.write("Text");  
+        document.write(ad); 
+        
+        // 3. Yazılım geliştirme aşamasında değişkenleri test etmek içim konsol ekranında yazdırma için console.log() kullanılır
+
+        console.log("Console text");
+
+        // 4. Belirli bir ID'ye sahip HTML elemanının içerğini değiştirip yazana komut
+
+        document.getElementById("name").innerHTML=ad;
+
+
+
+
+ 
+    </script>
+</body>
+</html>
