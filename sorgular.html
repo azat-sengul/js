@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorgular</title>
+</head>
+<body>
+
+    <script>
+
+        // if else
+        var yas = Number(prompt("Yaşınız: "));
+
+        if (yas < 18)
+        {
+            alert("Küçük!");
+        }
+        else if (yas>18)
+        {
+            alert("Büyük");
+        }
+        else
+        {
+            alert("Hata!")
+        }
+    </script>
+
+    <script>
+        var r = Number(prompt("Yarı çapı giriniz"));
+
+        var pi = 3.14;
+
+        if(r > 0)
+        {
+            var alan = pi * r * r;
+            var cevre = 2 * pi * r; 
+
+            alert("Dairenin alanı= " + alan + ", " + "Dairenin çevresi= " + cevre );
+
+        }
+        else
+        {
+            alert("hatalı değer!")
+        }
+    </script>
+
+    <script>
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday"; 
+                document.write(day);
+                break;
+            case 1:
+                day = "Monday"; 
+                document.write(day);
+                break;
+            case 2:
+                day = "Tuesday"; 
+                document.write(day);
+                break;
+            case 3:
+                day = "Wednesday"; 
+                document.write(day);
+                break;
+            case 4:
+                day = "Thursday"; 
+                document.write(day);
+                break;
+            case 5:
+                day = "Friday"; 
+                document.write(day);
+                break;
+            case 6:
+                day = "Saturday";
+                document.write(day); 
+                break;
+        
+            default:
+                break;
+        }
+
+
+    </script>
+    
+</body>
+</html>
