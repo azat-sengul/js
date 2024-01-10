@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merhaba Kullanıcı</title>
+</head>
+<body>
+    <script>
+        var ad;
+
+        ad = prompt("Adnınız giriniz: ");
+
+        document.write("Merhaba " + "<b>"+ ad+ "</b>");
+
+        document.write("<br>")
+
+    </script>
+
+    <script>
+        //Girilen iki sayının karesi
+
+        var s1 = Number(prompt("Sayi 1: "));
+
+        var sayiKaresi = s1*s1;
+
+        document.write("Girilen sayının karesi: " + sayiKaresi);
+
+        document.write("<br>");
+
+    </script>
+
+    <script>
+        //girilen iki sayının toplam
+
+        var s1 = Number(prompt("Birinci sayı:"));
+        var s2 = Number(prompt("İkinci sayı:"));
+
+        var toplam = s1 + s2;
+
+        document.write("Girilen sayıları toplam: " + toplam);
+
+        document.write("<br>");
+
+    </script>
+
+    <script>
+        //girilen 3 sayının ortalamsı
+        var s1 = Number(prompt("Birinci sayı:"));
+        var s2 = Number(prompt("İkinci sayı:"));
+        var s3 = Number(prompt("Üçüncü sayı:"));
+
+        var ortalama = (s1+s2+s3)/3;
+
+        document.write("Girilen sayıların ortalaması: " + ortalama);
+
+        document.write("<br>");
+
+    </script>
+
+    <script>
+        // Dikdörtgen çevre ve alan hesabı
+
+        var genislik = Number(prompt("Genişlik: "));
+        var yukseklik = Number(prompt("Yükseklik: "));
+
+        var alan = genislik * yukseklik;
+        var cevre = 2*(genislik+yukseklik);
+
+        document.write("Dikdörtgenin alan =" + alan + ", " + "Dikdörtgenin çevresi = " + cevre);
+
+        document.write("<br>")
+
+    </script>
+
+    <script>
+        //Daire alan ve çevre hesabı
+
+        var r, pi=3.14;
+
+        r = Number(prompt("Yarıçap: "));
+
+        var alan = pi * r * r;
+        var cevre = 2 * pi * r;
+
+        document.write("Daire alanı: " + alan + ", " + " Daire Çevresi: " + cevre);
+
+    </script>
+
+    
+</body>
+</html>
