@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operatörler</title>
+</head>
+<body>
+    <script>
+        // Math operatörler
+        // + : toplama
+        // - : çıkarma
+        // * : çarpma
+        // / : bölme
+        // % : mod alma (kalan)
+
+        var s1 = Number(prompt("Birinci sayı: "));
+
+        var s2 = Number(prompt("İkinci sayı: "));
+
+        var toplam = s1 + s2;
+        var fark = s1 - s2;
+        var carpim = s1 * s2;
+        var mod = s1 % s2;
+
+        document.write("Sayıların Toplamı = " + toplam);
+        document.write("<br>");
+        document.write("Sayıların Farkı = " + fark);
+        document.write("<br>");
+        document.write("Sayıların Çarpımı = " + carpim);
+        document.write("<br>");
+        document.write("s1 mod s2 = " + mod);
+
+        // artırma operatörü
+        // ++x : önce x'i 1 artır, daha sonra işlem yap
+        // x++ : önce x'i kullan, daha sonra 1 artır işlem yap
+        // --x : önce x'i 1 azalt, daha sonra işlem yap
+        // x-- : önce x'i kullan, daha sonra 1 azalt işlem yap
+
+        var a = 2;
+        document.write(a++);
+        document.write("<br>");
+        document.write(a);
+
+        document.write(a--);
+        document.write("<br>");
+        document.write(a);
+
+
+        document.write(++a);
+        document.write("<br>");
+        document.write(a);
+
+        document.write(--a);
+        document.write("<br>");
+        document.write(a);
+
+
+        // eşitlik ve ilişki operatörleri
+
+        // == : eşitse
+        // != : eşit değilse
+        // >, <, >=, <= : büyükse, küçükse, büyükeşitse, küçükeşitse 
+
+        if(x==y){
+
+            //kodlar
+        };
+
+        // atama operatörleri
+
+        // = : eşit
+        // x+=y : x = x+y
+        // x-=y : x = x-y
+        // x*=y : x = x*y
+        // x/=y : x = x/y
+        // x%=y : x = x%y
+
+        var x = 2;
+
+        x+=2;
+        x-=1;
+        x*=2;
+        x/=1;
+
+        alert(x); // sonuç 6dır
+
+        // operatör öncelik sırası
+
+        // 1. ()
+        // 2. x++, x--
+        // 3. ++y, --y
+        // 4. *, /, %
+        // 5. +, -
+        // .......
+
+    </script>
+</body>
+</html>
