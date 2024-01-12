@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonksiyonlar</title>
+    <script src="fonksiyon.js"></script>
+
+</head>
+<body>
+
+<script>
+    Linking();
+
+    var a=3, b=3;
+
+    document.write(Topla(a,b) + "<br>" );
+    document.write(Carpim(a,b) + "<br>");
+    document.write(Kare(a) + "<br>");
+    document.write(Kup(b) + "<br>");
+
+    Yaz("Azat");
+    Yaz(2);
+
+</script>
+
+<script>
+    //n defa merhaba yazan program
+
+    var n = Number(prompt("Kaç defa yazsın?: "));
+
+    for (var i = 1; i <= n; i++)
+    {
+        Merhaba();
+    }
+
+</script>
+
+<script>
+    var sayi1 = Number(prompt("Birinci Sayı: "));
+    var sayi2 = Number(prompt("İkinci Sayı: "));
+
+    document.write("Girilen sayıların toplamı = "+ Topla(sayi1, sayi2));
+    document.write("<br>");
+</script>
+
+<script>
+    // daire alan ve çevre hesabı
+    var yaricap = Number(prompt("Dairenin yarıçapını giriniz: "));
+
+    document.write("Dairenin Alanı = " + Alan(yaricap) + "<br>" ); 
+    document.write("Dairenin Çevresi = " + Cevre(yaricap) ); 
+
+</script>
+
+</body>
+</html>
