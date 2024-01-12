@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonksiyonlar</title>
+</head>
+<body>
+
+    <script>
+        // Ana program tarafından ihtiyaç durumunda çağrılan program parçaçıklarına fonksiyon denir.
+        // örneğin bir butona basıldığında onclick ile bir fonksiyon çalıştırılabilir
+        // <input type = "button" value = "Buton adı" onclick="fonksiyon()"
+        function name(params) { 
+
+            // Kodlar
+            
+        }
+
+        // fonksiyonlar temelde 2 gruba ayrılır
+        // 1. Değer Döndürmeyen Fonkisyonlar 
+
+            // a. Parametresiz
+                function merhaba() {
+                    document.write("merhaba");
+                }
+                merhaba(); // fonksiyonu çalıştırmak için çağırma
+                document.write("<br>");
+
+            // b. Tek Parametreli
+                function selam(ad) {
+                    
+                    document.write("Merhaba " + ad + " Naber?");
+                }
+                selam("Azat"); //fonksiyon çağırma
+
+                document.write("<br>");
+
+            // c. Çok Parametreli
+                function toplama(s1, s2) {
+                    var topla = s1 + s2;
+                    document.write(topla);    
+                }
+                toplama(3,5);
+
+                document.write("<br>");
+
+        // 2. Değer Döndüren Fonkisyonlar (return olur)
+            // a. Tek Parametreli
+                function Kare(x) {
+                    return x * x ;
+                }
+                document.write(Kare(2)); // Kare(2) ile fonksiyon çalıştırılıp sonuç döndürülür.
+                document.write("<br>");
+
+            // b. Çok Parametreli
+                function Toplam(s1, s2) {
+                    var toplam = s1 + s2 ;
+                    return toplam;
+                }
+                document.write(Toplam(6,7));
+
+
+    </script>
+    
+</body>
+</html>
