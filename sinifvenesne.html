@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class ve Object</title>
+</head>
+<body>
+
+    <script>
+        // Sınıf Oluşturma
+        class Uye                  // Uye adlı bir sınıf oluşturma
+        {
+            constructor(uyeNo, uyeName)     // constructor(yapıcı fonksiyon) sınıfın parametrelerini belirler
+            {
+                this.uyeNo = uyeNo; // this komutu sınıfı temsil eder, sınıf parametresine değer atar.
+                this.uyeName=uyeName;
+
+            }
+
+        }
+
+        // Nesne oluşturma
+
+        var uye1 = new Uye(1, "Azat");  // uye1 nesnesi oluşturuldu, no = 1 atandı
+        var uye2 = new Uye(2);  // uye2 nesnesi oluşturuldu, no = 2 atandı 
+
+        document.write("Üye No: " + uye1.uyeNo + " Üye Adı: " +uye1.uyeName);
+
+
+    </script>
+
+
+    
+</body>
+</html>

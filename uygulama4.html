@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> OOP Örnek</title>
+</head>
+<body>
+
+    <script>
+        // Daire alan ve çevre hesabı
+        class Daire
+        {
+            constructor(yaricap)
+            {
+                this.yaricap = yaricap;
+            }
+
+            Alan(yaricap)
+            {
+                var pi = 3.14;
+                var alan = pi * this.yaricap * this.yaricap;
+                return alan;
+            }
+
+            Cevre(yaricap)
+            {
+                var pi = 3.14;
+                var cevre = 2 * pi * this.yaricap;
+                return cevre;
+            }
+        }
+
+        // nesne oluşturma
+        var r = Number(prompt("Dairenin Yarıçapı = ")); 
+        var d1 = new Daire(r);
+
+        // ekrana yazdırma
+        document.write("Dairenin alanı = " + d1.Alan() + "<br>" );
+        document.write("Dairenin çevresi = " + d1.Cevre() + "<br>" );
+
+    </script>
+
+    <script>
+
+        class Ucgen
+        {
+            static genislik = 0;      // Özellik
+            static yukseklik = 0;     // Özellik
+
+            Alan()                    // Metot
+            {
+                var alan = (this.genislik * this.yukseklik)/2; 
+                return alan;
+            }
+        }
+        var ucgen = new Ucgen();
+        ucgen.genislik = Number(prompt("Üçgen Genişlik = "));
+        ucgen.yukseklik = Number(prompt("Üçgen Yükseklik = "));
+
+        document.write("Üçgenin Alan = " + ucgen.Alan());
+        document.write("<br>" + "***************" + "<br>")
+
+
+    </script>
+
+    <script>
+
+        class Dikdortgen
+        {
+            static en = 0;
+            static boy = 0;
+
+            Alan()
+            {
+                return this.en * this.boy;
+            }
+
+            Cevre()
+            {
+                return 2 * (this.en + this.boy);
+            }
+        }
+
+        var dikdortgen = new Dikdortgen();
+
+        dikdortgen.en = Number(prompt("Dikdörtgenin Eni = "));
+        dikdortgen.boy = Number(prompt("Dikdörtgenin Boyu = "));
+
+        document.write("Dikdörtgen Alanı = " + dikdortgen.Alan() + "<br>" );
+        document.write("Dikdörtgen Çevresi = " + dikdortgen.Cevre() + "<br>" );
+
+    </script>
+    
+</body>
+</html>
