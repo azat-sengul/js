@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Gömülü Fonksiyonlar</title>
+</head>
+<body>
+
+    <p id="random" >Random sayı buraya gelecek</p>
+
+    <script>
+        // Date 
+        // Bunun için kütüphane kullanılabilir. Örneğin momentjs.com
+
+        var an = new Date();
+
+        var gun = an.getDate();
+        var ay = an.getMonth() + 1 ;
+        var yil = an.getFullYear();
+        var saat = an.getHours();
+        var dakika = an.getMinutes();
+        var saniye = an.getSeconds();
+
+        document.write(an + "<br>");
+        document.write(an.toLocaleDateString() + "<br>"); // gün.ay.yıl şeklinde yazar
+
+        document.write("<br>");
+
+        document.write ("Tarih: " + gun + "<br>" +
+                         "Ay: "  + ay + "<br>" +
+                         "Yıl: " + yil + "<br>" +
+                         "Saat: " + saat + "<br>" +
+                         "Dakika: " + dakika + "<br>" +
+                         "Saniye: " + saniye  );
+        
+        document.write("<br>");
+        document.write("<br>");
+    </script>
+
+    <script>
+        // Math Fonksiyoları
+        var x = 5;
+
+        var y =  Math.sqrt(x); // x'in karakökü
+
+        var z = Math.pow(x, y); // x'in y'ninci kuvveti
+
+        var rand = Math.random() // 0-1 arasında random sayı üretir
+
+        var max = Math.max(x,y,z,rand) // parantez arasındaki en yüksek sayıyı yazar
+
+        var round = Math.round(y); // y sayısını yuvarlar
+
+        var rand2 = Math.round(Math.random() * 100) // 0 - 100 arasında random sayı üretir
+
+ 
+
+        document.write(y); 
+        document.write("<br>");
+        document.write(z);
+        document.write("<br>"); 
+        document.write(rand);
+        document.write("<br>");
+        document.write(max);
+        document.write("<br>");
+        document.write(round);
+        document.write("<br>");
+        document.write(rand2);
+        document.getElementById("random").innerHTML = rand2 ;
+
+    </script>
+
+    <script>
+        // String Fonksiyonları
+
+        var text = "Merhaba bu birinci metindir";
+        var text2 = "Merhaba bu ikinci metindir";
+
+        document.write(text.toLocaleUpperCase() + "<br>"); // büyük harfe çevirme
+        document.write(text.toLowerCase()+ "<br>" ); // küçük harf çevirme
+        document.write(text.length + "<br>" ); // metin uzunluğu
+        document.write(text.trim() + "<br>" ); // sol ve sağdaki boşlukları atma
+        document.write(text.bold() + "<br>" ); // metin kalın yazma
+        document.write(text.italics() + "<br>" ); // metin italik yazma
+        document.write(text.search("b") + "<br>" ); // metin içinde arama yapar ve indisi döndürür
+        document.write(text.charAt(0) + "<br>" ); // metin içinde istenilen indisteki karakteri döndürür
+        document.write(text.replace(text, text2 ) + "<br>" ); // text ile text2 yerlerini değiştirme 
+
+    </script>
+
+    <script>
+        // Number Fonksiyonlar
+
+        var a = 14.246;
+
+        var b = a.toString(a); // strginge çevirir
+
+        var c = a.toExponential(1); // üslü sayıya çevirir, noktadan sonra 1 numara gösterir = 1.4e+1
+
+        var d = a.toFixed(0); // Ondalııklı kısım yok
+        var e = a.toFixed(2); // virgülden sonra 2 hane
+
+        var f = a.toPrecision(); // Değeri belirtilen karakter sayısında yuvarlatıp döndürür.
+        var g = a.toPrecision(2);
+        var h = a.toPrecision(5);
+
+        document.write(a + "<br>");
+        document.write(b + "<br>");
+        document.write(c + "<br>");
+        document.write(d + "<br>");
+        document.write(e + "<br>");
+        document.write(f + "<br>");
+        document.write(g + "<br>");
+        document.write(h + "<br>");
+
+    </script>
+
+    <script>
+        // Number
+
+        var x = 5.456;
+
+        var parseint = parseInt(x); // tam sayı kısmını alır
+        var parsefloat = parseFloat(x); // ondalıklı sayı kısmını tutar
+        var str = String(x); // string ifadeye çevirir
+
+
+        document.write("<br>");
+        document.write(parseint);
+        document.write("<br>");
+        document.write(parsefloat);
+        document.write("<br>");
+        document.write(typeof(str));
+    </script>
+    
+</body>
+</html>
