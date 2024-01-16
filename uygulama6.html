@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diziler</title>
+</head>
+<body>
+    <script>
+        // dizi oluşturma
+
+        var elemanSayisi = Number(prompt("Kaç elemanlı bir dizi olsun? "));
+
+        var arkadaslar = new Array(elemanSayisi);
+
+        for (let i = 0; i < elemanSayisi; i++) {
+            
+            var value = prompt("Dizinin " + (i+1) + ". elemanı= ");
+
+            arkadaslar[i] = value;
+            
+        }
+
+        document.write(arkadaslar);
+        document.write("<br>");
+        var eleman = arkadaslar.length;
+        document.write(eleman)
+        document.write("<br>");
+        document.write("Dizinin İkinci elemanı: "+arkadaslar[1]);
+        document.write("<br>");
+        document.write("Dizinin Birinci elemanı: "+arkadaslar[0]);
+        document.write("<br>");
+    </script>
+    
+    <script>
+        // 5 sayı al ortalama bul
+        // değişken tanımlama
+        var arr = new Array(5);
+
+        var sum = 0;
+
+        for (let i = 0; i < 5; i++) {
+            
+            var number = Number(prompt("Dizinin " + (i+1) + ". elemanını giriniz: "));
+
+            arr[i] = number; 
+            sum += i;
+            
+        } 
+
+        var average = sum / 5;
+
+        document.write("Dizi elemanlarının ortlaması = " + average);
+
+
+    </script>
+
+</body>
+</html>
