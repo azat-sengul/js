@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document  </title>
+</head>
+<body>
+    <h2>linkler</h2>
+    <a href="index.html"> Anasayfa </a> | 
+    <a href="bizkimiz.html"> Hakkımızda</a> | 
+    <a href="iletisim.html"> İletişim</a>
+
+    <h2>Resimler</h2>
+    <img src="resim1.jpeg" alt=""  style="width: 200px; height: 200px;" >
+    <img src="resim2.jpeg" alt="" style="width: 200px; height: 200px;">
+
+    <h2>Form</h2>
+
+    <form name="test">
+
+       Ad:  <input type="text"> <br>
+
+       SoyAd: <input type="text"> <br>
+
+
+       <input type="button" onclick="yaz()" value="Tıkla"> 
+       <input type="reset" value="Sıfıla">
+
+    </form>
+
+    <script>
+        //Document dizileri
+
+        document.write( "Link sayısı: " + document.links.length + "<br>");
+        document.write( "Resim sayısı: " + document.images.length + "<br>");
+        document.write( "Form sayısı: " + document.forms.length + "<br>");
+        document.write( "Form eleman sayısı: " + document.forms["test"].length + "<br>");
+
+        function yaz() 
+        {
+            var test = document.forms["test"];
+
+            for (let i = 0; i < test.length; i++) {
+                
+                document.write(test.elements[i].value + "<br>");
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>

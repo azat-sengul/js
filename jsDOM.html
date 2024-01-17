@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p id="manset"> Manşet</p>
+    <p id="manset2"> Manşet</p>
+    <p id="url"></p>
+
+    <img src="resim1.jpeg" id="foto" onmouseover="Siyah()" onmouseout="Renkli()" style="width: 200px; height: 200px; " > 
+
+
+    <h2 id="baslik"></h2>
+    <script>
+        // DOM ile html sayfadaki nesnelere erişilebilir. Bu nesneler seçilip işlem yapılabilir.
+        //  DOM için HTML sayfalarının iskeleti de denebilir.
+        // HTML sayfadaki komutlar eklemeler yapılması veya silinmesi
+        // HTML içeriklerinin değiştirilmesi
+        // CSS özelliklerinin değiştirilmesi
+        // HTML olaylarının tetiklenmesi örneğin buton faaliyetleri
+
+       document.getElementById("baslik").innerHTML ="Merhaba"; // bu kod ile id'si baslik olan h2 tagına merhaba yazar;
+
+    </script>
+
+    <script>
+        // Document Nesnesi bazı kullanım şekilleri aşağıdaki gibidir
+
+        // document.write() : sayfaya yazar
+        // document.URL : Aktif sayfanın adresini döndürür
+        // document.referer : Aktif sayfaya hangi adresten gelindiğini döndürür
+        // document.forms[] : Sayfadaki form elemanlarına erişilmesini sağlar
+        // document.images[] : Sayfadaki resimler erişilmesini sağlar
+        // document.links[] : Sayfadaki linklere erişilmesini sağlar
+    
+    // Documnet Özellikleri
+
+      var url = document.URL;
+      document.getElementById("url").innerHTML = url;
+      document.write("<br>");
+      document.write("Sayfanın başlağı: " + document.title + "<br>" ); // sayfanın başlığını yazar
+
+      document.write("Safanın Genişliği = " + document.documentElement.clientWidth + "<br>" ); // sayfanın enini yazar
+      document.write("Safanın Genişliği = " + document.documentElement.clientHeight + "<br>" ); // sayfanın boyunu yazar
+    
+    </script>
+
+    <script>
+    // Documnet Metotları
+
+    // document.getElementById(id) : Id numarası kullanarak nesneyi seçer
+    // document.getElementByName(name) : Nesenenin name özelliğini kullanarak nesneyi seçer
+    // document.getElementByTagName(tag) : Nesenenin Tag'nı kullanarak nesneyi seçer
+
+    // içerik değiştirme 
+    document.getElementById("manset").innerHTML = " <i> Son Manşet! </i>";
+    document.getElementById("manset2").innerText = " <i> Son Manşet! </i>"; // İnnerText html komutlarını tanımaz. Normal metin olarak algılar.
+
+    
+    // css verme
+    document.getElementById("manset").style.color="red";
+    document.getElementById("manset").style.fontFamily="Arial";
+
+
+    // özellik değiştirme
+    function Renkli() //  onmouseout="Renkli()" - mouse resmin dışında - ile resim1.jpeg ekranda görünür
+    {
+       document.getElementById("foto").src = "resim1.jpeg";
+    }
+
+    function Siyah() // onmouseover="Siyah()"  - mouse resmin üzerinde - ile resim2.jpeg ekranda görünür
+    {
+        document.getElementById("foto").src = "resim2.jpeg";
+    }
+
+
+    </script>
+    
+</body>
+</html>
