@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object </title>
+</head>
+<body>
+
+    <h2 id="sayac" >Kronometre</h2>
+    
+
+   <button type="submit" onclick="pencere()" >Pencereyi Aç</button>
+   <button type="submit" onclick="setTimeout(zaman, 5000)" >setTimeout</button>
+
+   <button type="submit" onclick="Kronometre()" >Kronometreyi başlat</button>
+
+    <script>
+        // Tarayıcı Window nesnesine denk gelir
+        // Window altında: Document, History, Location, Screen, Navigator gibi nesneler var
+
+        // aşağıdaki kodlar başında window olmadan da kullanılabilir
+
+        // Window.name: Pencereye isim verir
+        // window.alert() : js'de kullanılan alert() metodudur
+        // window.prompt() : js'de kullanılan prompt() metodudur
+        // window.print() : Sayfayı yazdırır
+        // window.open(URL) : Belirtilen URL'yi yeni sekmede veya aynı sayfa açmaya yarar
+        // window.close() : Aktif pencereyi kapatır
+        // window.confirm() : Onay kutusu çalıştırır. Tamam true, iptal false döndürür.
+        // setTimeout(fonksiyon, ms) : Belirli bir süre sonra çalışması istenen fonkisyonlar için kullanılır
+        // setInterval(fonksiyon, ms) : Belirli kodlarlrın belirli aralıklarla çalışması için kullanılır
+        
+        function pencere()
+        {
+            open("uygulama1.html", "_blank", "height=600, width=600");
+        }
+
+        function zaman()
+        {
+            alert("Sayfa 5 saniye önce yüklendi");
+        }
+
+        var sure = 0;
+
+        function Kronometre()
+        {
+            document.getElementById("sayac").innerHTML = "Geçen Süre: " + sure;
+            sure +=1;
+        }
+
+        window.setInterval(Kronometre,1000);
+
+
+
+
+    </script>
+    
+</body>
+</html>
