@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body>
+    
+    <h1 onclick='this.innerHTML="Tıkladın!" '>Buraya tıkla</h1>
+
+    <h1 onmouseover='this.innerHTML="Yaklaştın!"' onmouseout='this.innerHTML="Uzaklaştın!"' >Fare Hareketi</h1>
+  
+
+    <input type="button" value="Butona Tıkala" onclick="Tikla()" >
+
+    <h2 id="h2">Başlık</h2>
+
+    <button type="submit" onclick='document.getElementById("h2").style.color="red"'> H2 CSS butonu </button>
+
+    <script>
+        // HTML DOM kullanılarak belirli olaylar meydana geldiğinde belirli js fonksiyon ya da kodların çalıştırılması sağlanır
+        // örneğin butona tıklandığın, sayfa yüklendiğinde gibi olaylar 
+
+        // onload ="fonksiyon()" : yeni bir sayfanın açılması ya da yüklenmesi ile onload olayı meydana gelir
+        // onunload ="fonksiyon()" :  sayfanın kapanmasında onunload olayı meydana gelir
+        // onsubmit ="fonksiyon()" :  form onaylandığında onsubmit olayı meydana gelir
+        // oninvalid ="fonksiyon()" :  form girilen elemanlar geçerli değilse oninvalid olayı meydana gelir
+        // oncick ="fonksiyon()" :  Bir html nesnesine tıklandığında onclick olayı meydana gelir
+
+        function Tikla() 
+        {
+            alert("Butona Tıklandı");
+        }
+
+    </script>
+
+</body>
+</html>

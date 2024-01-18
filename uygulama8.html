@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Events</title>
+</head>
+<body onload="selam()" >
+
+    <p>Tarihi görmek için butona tıklayın</p>
+    <p id="tarih"></p>
+
+    <button type="submit" onclick="Tarih()" >Tarihi göster</button>
+
+    <script>
+        function Tarih()
+        {   
+            var date = new Date();
+
+            var gun = date.getDate();
+            var ay = date.getMonth();
+            var yil = date.getFullYear();
+            var tarih = gun + "." + (ay +1) + "." + yil;
+            document.getElementById("tarih").innerHTML = "Bugün : " + tarih;
+        }
+    
+        function selam()
+        {
+            alert("Selam, sayfa yüklendi!");
+        }
+
+
+
+    </script>
+    
+</body>
+</html>
