@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="setInterval(Kontrol,1000), setInterval(DegerKontrol,1000)" >
+    
+    Değer : <input type="text" id="vize1"  > <span id="mesaj" ></span> <br> <br>
+    
+    <span id="mesaj"></span>
+    Adınız: <input type="text" id="ad" > <span id="text" ></span>
+    
+    <script>
+        // Id değeri ad olan metin kutusunun içeri boş ise "lütfen adınızı girin" yazan js kodu
+
+        function Kontrol()
+        {
+            if (document.getElementById("ad").value == "")
+            {
+                document.getElementById("text").innerHTML = "Veri girişi Yapılmadı"; 
+            }
+
+            if (document.getElementById("ad").value != "")
+            {
+                document.getElementById("text").innerHTML = ""; 
+            }
+ 
+        }
+
+        function DegerKontrol()
+        {
+            var deger = document.getElementById("vize1").value;
+
+            if (deger <= 0 || deger >= 100 || deger == "")
+            {
+                document.getElementById("mesaj").innerHTML = "Değer 0 - 100  arasında olmalıdır!"
+            }
+
+            else if (isNaN(deger))
+            {
+                document.getElementById("mesaj").innerHTML = "Değer 0 - 100  arasında olmalıdır!"
+            }
+
+            else 
+            {
+                document.getElementById("mesaj").innerHTML = "Değer kabul edildi."
+            }
+        }
+
+        
+
+    </script>
+
+</body>
+</html>

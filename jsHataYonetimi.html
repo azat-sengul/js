@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Hata Yönetimi</title>
+</head>
+<body>
+    <p>lütfen 5  ile 10 arasında bir sayı giriniz... </p> <br> 
+    Sayı: <input type="text" id="sayi" > <br> <br>
+    <p id="ileti"></p>
+
+    <button onclick="kontrol()" >Giriş Testi</button>
+
+    <p id="hata"></p>
+    <script>
+        // Try: Hata olabiliecek kodlar bu bloğa yazılır
+        // Catch: Hatayı yakalar ve hata mesajını yazmamızı sağlar
+        // Throw: Özel Hata mesajları göstermemizi sağlar
+        // Finally: Hata olsa da olmasa da çalışması istenen kodlar bu bloğa yazılır.
+        try 
+        {
+            aalert("Merhaba!") // bu blok kodu çalıştırmayı dener
+        }
+        catch (error)
+        {
+            document.getElementById("hata").innerHTML = error.message; //hata olması durumda hata burada yakalanıp yazılır
+            document.getElementById("hata").style.color="red";
+        }
+
+    </script>
+
+    <script>
+        // Giriş testi
+
+        function kontrol()
+        {
+            var ileti, x; 
+
+            ileti = document.getElementById("ileti");
+            ileti.innerHTML = "";
+
+            x = document.getElementById("sayi").value;
+
+            try {
+
+                if (x == "")
+                {
+                    throw "boş!";
+                }
+
+                if (isNaN(x))
+                {
+                    throw "Sayı değil";
+                }
+
+                if (x < 5)
+                {
+                    throw "Sayı 5'ten küçük!"
+                }
+
+                if (x > 10)
+                {
+                    throw "Sayı 10'dan büyük!"
+                }
+
+                if ( 5 < x < 10 )
+                {
+                    throw "Uyun değer!"
+                }
+                
+            } catch (error)
+            {
+                ileti.innerHTML = "Girilen Değer: " + error;
+            }
+        }
+
+
+    </script>
+    
+</body>
+</html>
